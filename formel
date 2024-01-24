@@ -1,0 +1,26 @@
+function beregnTotalTid() {
+  // Hent dato og klokkeslett fra inndatafeltene
+  var klarTilUtbakingDato = document.getElementById('klarTilUtbakingDato').value;
+  var klarTilUtbakingKlokkeslett = document.getElementById('klarTilUtbakingKlokkeslett').value;
+
+  // Hent verdier for andre variabler
+  // ... (andre variabler som tidligere)
+
+  // Beregn den totale tiden basert på brukerens ønskede tidspunkt
+  var totalTid = beregnTidFraNåTilDatoOgKlokkeslett(klarTilUtbakingDato, klarTilUtbakingKlokkeslett) +
+                 // ... (andre variabler som tidligere)
+
+  document.getElementById('resultat').innerHTML = 'Total tid: ' + totalTid + ' timer';
+}
+
+function beregnTidFraNåTilDatoOgKlokkeslett(dato, klokkeslett) {
+  // Implementer logikk for å beregne tid fra nå til angitt dato og klokkeslett
+  // Dette avhenger av det spesifikke rammeverket eller biblioteket du bruker for dato- og tidshåndtering
+  // Eksempel: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+
+  var nå = new Date();
+  var ønsketTid = new Date(dato + ' ' + klokkeslett);
+  var tidDifferanse = (ønsketTid - nå) / (1000 * 60 * 60); // forskjell i timer
+
+  return tidDifferanse;
+}
